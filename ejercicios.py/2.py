@@ -11,21 +11,20 @@ def main():
 
 def determinar_numero(lista):
     if not lista:
-        return None  # Maneja el caso de lista vacía
+        return None 
 
     max_repeticiones = 0
-    mayor = lista[0]  # Suponemos que el primer número es el más frecuente
+    mayor = lista[0]  
 
     for i in range(len(lista)):
         referencia = lista[i]
         contador = 0
 
-        # Contar cuántas veces aparece el número actual en la lista
+       
         for j in range(len(lista)):
             if lista[j] == referencia:
                 contador += 1
 
-        # Si encontramos un número con más repeticiones, lo actualizamos
         if contador > max_repeticiones:
             max_repeticiones = contador
             mayor = referencia
